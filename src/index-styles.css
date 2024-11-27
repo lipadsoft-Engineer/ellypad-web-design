@@ -20,7 +20,9 @@ body{
 /* =========================================================== */
 /* variables */
 :dark-theme{
-    --main-clr: #000;
+    --main-clr: #016b42;
+    --shade1:#00bd74;
+    --shade2: #00ff9d;
 }
 
 
@@ -116,10 +118,12 @@ body{
     box-sizing: border-box;
     width: 100vw;
     padding: 0 20px;
-    background-color: red;
 }
 #hero .bcg-shape{
+    position: absolute;
+    top: 20vh;
     width: 400px;
     height: 400px;
-    background-color: ;
+    background: red;
+    background-color: var(--shade1);
 }
