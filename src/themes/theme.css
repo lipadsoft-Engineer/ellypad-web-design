@@ -1,0 +1,11 @@
+/* =========================================================== */
+/* light-theme */
+
+:root{
+    --darkblue: #0a6d7a;
+    --lblue: #1bb1b1;
+    --lightblue: #ebfcf8;
+    --lightgreen: #e4fc0d;
+    --warmorange: #e4fc0d;
+    --blueshadow: lightblue;
+}

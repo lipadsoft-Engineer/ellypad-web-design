@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Chivo:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* =========================================================== */
+/* browser directives */
+*{
+    padding: 0;
+    margin: 0;
+}
+
+html{
+    font-size: 18px;
+}
+
+body{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* =========================================================== */
+/* variables */
+:dark-theme{
+    --main-clr: #000;
+}
+
+
+/* =========================================================== */
+/* header */
+#header{
+    width: 100vw;
+    position: relative;
+}
+
+#header .navbar{
+    box-sizing: border-box;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    box-shadow: 5px 5px 10px;
+    font-family: "Chivo", sans-serif;
+    padding: 0 2%;
+}
+
+#header .navbar .logo{
+    justify-self: left;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    width: 50%;
+}
+
+#header .navbar .logo .name{
+    font-size: 1.3rem;
+}
+
+#header .navbar .logo img{
+    width: 50px;
+    margin: 10px 20px;
+}
+
+#header .navbar .nav-links{
+    justify-self: right;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    width: 50%;
+    font-size: 0.8rem;
+}
+
+#header .navbar .nav-links a{
+    margin: 10px 10px;
+    padding: 4px 10px;
+    text-decoration: none;
+    transition: 0.03s ease;
+}
+#header .navbar .nav-links a:hover{
+    border-bottom: 2px solid;
+}
+
+#header .navbar .nav-links .account-btn{
+    background-color: blueviolet;
+    color: white;
+    border-radius: 15px;
+    transition: 0.03s ease;
+}
+#header .navbar .nav-links .account-btn:hover{
+    background-color: aqua;
+}
+
+/* toggler */
+#toggler{
+
+}
+
+#toggler button{
+    padding: 0px 4px;
+    padding-top: 2px;
+    color: green;
+}
+#toggler button .bars{
+    width: 15px;
+}
+#toggler button:hover .bars{
+    color: red;
+}
+
+#toggler button .bars-icon path{
+    color: red;
+}
+
+
+/* =========================================================== */
+/* hero section */
+#hero{
+    position: relative;
+    box-sizing: border-box;
+    width: 100vw;
+    padding: 0 20px;
+    background-color: red;
+}
+#hero .bcg-shape{
+    width: 400px;
+    height: 400px;
+    background-color: ;
+}

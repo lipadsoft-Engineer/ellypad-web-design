@@ -1,0 +1,14 @@
+@media screen and (max-width: 550px) {
+    html{
+        font-size: 14px;
+    }
+
+    #header .navbar .nav-links{
+        justify-self: right;
+        display: flex;
+        justify-content: right;
+        align-items: center;
+        width: 50%;
+        font-size: 0.8rem;
+    }
+}
