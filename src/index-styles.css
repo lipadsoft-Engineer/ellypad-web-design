@@ -68,7 +68,7 @@ body{
     margin: 10px 20px;
 }
 
-#header .navbar .nav-links{
+#header .navbar :is(.nav-links, .animate){
     justify-self: right;
     display: flex;
     justify-content: right;
@@ -77,23 +77,23 @@ body{
     font-size: 0.8rem;
 }
 
-#header .navbar .nav-links a{
+#header .navbar :is(.nav-links, .animate) a{
     margin: 10px 10px;
     padding: 4px 10px;
     text-decoration: none;
     transition: 0.03s ease;
 }
-#header .navbar .nav-links a:hover{
+#header .navbar :is(.nav-links, .animate) a:hover{
     border-bottom: 2px solid;
 }
 
-#header .navbar .nav-links .account-btn{
+#header .navbar :is(.nav-links, .animate) .account-btn{
     background-color: var(--shade2);
     color: var(--text-black);
     border-radius: 15px;
     transition: 0.03s ease;
 }
-#header .navbar .nav-links .account-btn:hover{
+#header .navbar :is(.nav-links, .animate) .account-btn:hover{
     background-color: var(--shade1);
 }
 
@@ -201,22 +201,23 @@ body{
         margin: 5px 10px;
     }
 
-    #header .navbar .nav-links, #header .navbar .animate{
+    #header .navbar :is(.nav-links, .animate) {
         flex-direction: column;
         position: absolute;
         top: 110%;
-        right: 31px;
+        right: -150px;
         width: auto;
+        border-radius: 3px;
         box-shadow: 0 0 5px var(--shade2);
         background-color: var(--main-clr);
-        opacity: 80%;
+        opacity: 70%;
         font-size: 0.8rem;
         padding: 20px 20px;
     }
     #header .navbar .nav-links{
         animation: toright 1s ease forwards;
     }
-    #header .navbar animate{
+    #header .navbar .animate{
         animation: toleft 1s ease forwards;
     }
 

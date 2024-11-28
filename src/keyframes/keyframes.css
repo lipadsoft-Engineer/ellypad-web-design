@@ -1,9 +1,9 @@
 @keyframes toleft {
     from{
-        right: -50px;
+        right: -150px;
     }
     to{
-        right: 1px;
+        right: 0px;
     }
 }
 
@@ -12,6 +12,6 @@
         right: 1px;
     }
     to{
-        right: -50px;
+        right: -150px;
     }
 }
