@@ -1,0 +1,17 @@
+@keyframes toleft {
+    from{
+        right: -50px;
+    }
+    to{
+        right: 1px;
+    }
+}
+
+@keyframes toright {
+    from{
+        right: 1px;
+    }
+    to{
+        right: -50px;
+    }
+}

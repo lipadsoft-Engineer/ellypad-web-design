@@ -15,14 +15,19 @@ body{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    overflow-x: hidden;
 }
 
 /* =========================================================== */
-/* variables */
-:dark-theme{
+/* variables ----------- to theme file */
+:root{
     --main-clr: #016b42;
     --shade1:#00bd74;
     --shade2: #00ff9d;
+
+    --text-white: #ffffff;
+    --text-black: #000000;
+    --text-strict-white: #fff;
 }
 
 
@@ -30,10 +35,13 @@ body{
 /* header */
 #header{
     width: 100vw;
-    position: relative;
+    position: fixed;
+    box-sizing: border-box;
+    z-index: 999;
 }
 
 #header .navbar{
+    position: relative;
     box-sizing: border-box;
     width: 100%;
     display: flex;
@@ -80,24 +88,30 @@ body{
 }
 
 #header .navbar .nav-links .account-btn{
-    background-color: blueviolet;
-    color: white;
+    background-color: var(--shade2);
+    color: var(--text-black);
     border-radius: 15px;
     transition: 0.03s ease;
 }
 #header .navbar .nav-links .account-btn:hover{
-    background-color: aqua;
+    background-color: var(--shade1);
 }
 
 /* toggler */
-#toggler{
-
+#toggler button{
+    background-color: var(--shade1);
+    border: none;
+    border-radius: 5px;
+    transition: 0.3s ease;
+}
+#toggler button:hover{
+    cursor: pointer;
+    background-color: var(--shade2);
 }
 
 #toggler button{
     padding: 0px 4px;
     padding-top: 2px;
-    color: green;
 }
 #toggler button .bars{
     width: 15px;
@@ -116,6 +130,7 @@ body{
 #hero{
     position: relative;
     box-sizing: border-box;
+    overflow-x: hidden;
     width: 100vw;
     padding: 0 20px;
 }
@@ -124,6 +139,88 @@ body{
     top: 20vh;
     width: 400px;
     height: 400px;
-    background: red;
     background-color: var(--shade1);
+}
+
+
+
+
+
+/* =========================================================== */
+/* Media Queries */
+/* tablets ---------------- */
+@media screen and (max-width: 770px) {
+    html{
+        font-size: 16px;
+    }
+
+    /* header -------- */
+    #header .navbar{
+        justify-content: space-between;
+    }
+
+    #header .navbar .logo img{
+        width: 45px;
+        margin: 8px 13px;
+    }
+
+    #header .navbar .nav-links{
+        flex-direction: column;
+        position: absolute;
+        top: 110%;
+        right: 1px;
+        width: auto;
+        box-shadow: 0 0 5px var(--shade2);
+        background-color: var(--main-clr);
+        opacity: 80%;
+        font-size: 0.8rem;
+        padding: 20px 20px;
+    }
+    
+    #header .navbar .nav-links a{
+    }
+
+    /* hero ----------- */
+    
+
+}
+
+/* mobile phones ----------- */
+@media screen and (max-width: 550px) {
+    html{
+        font-size: 14px;
+    }
+
+    /* header -------- */
+    #header .navbar{
+        justify-content: space-between;
+    }
+
+    #header .navbar .logo img{
+        width: 45px;
+        margin: 5px 10px;
+    }
+
+    #header .navbar .nav-links, #header .navbar .animate{
+        flex-direction: column;
+        position: absolute;
+        top: 110%;
+        right: 31px;
+        width: auto;
+        box-shadow: 0 0 5px var(--shade2);
+        background-color: var(--main-clr);
+        opacity: 80%;
+        font-size: 0.8rem;
+        padding: 20px 20px;
+    }
+    #header .navbar .nav-links{
+        animation: toright 1s ease forwards;
+    }
+    #header .navbar animate{
+        animation: toleft 1s ease forwards;
+    }
+
+    /* hero ----------- */
+   
+
 }
