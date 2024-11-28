@@ -15,3 +15,12 @@
         right: -150px;
     }
 }
+
+@keyframes infiniloop {
+    from{
+        transform: perspective(1300px) rotateX(-16deg) rotateY(0deg);
+    }
+    to{
+        transform: perspective(1300px) rotateX(-16deg) rotateY(360deg);
+    }
+}

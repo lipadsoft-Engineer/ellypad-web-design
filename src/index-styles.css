@@ -16,6 +16,7 @@ body{
     margin: 0;
     box-sizing: border-box;
     overflow-x: hidden;
+    background-color: var(--bcg-col);
 }
 
 /* =========================================================== */
@@ -46,7 +47,7 @@ body{
     width: 100%;
     display: flex;
     align-items: center;
-    box-shadow: 5px 5px 10px;
+    box-shadow: 5px 5px 10px var(--main-clr);
     font-family: "Chivo", sans-serif;
     padding: 0 2%;
 }
@@ -99,6 +100,7 @@ body{
 
 /* toggler */
 #toggler button{
+    display: none;
     background-color: var(--shade1);
     border: none;
     border-radius: 5px;
@@ -132,14 +134,101 @@ body{
     box-sizing: border-box;
     overflow-x: hidden;
     width: 100vw;
-    padding: 0 20px;
+    padding: 0 0px;
 }
+
+#hero .glass{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(50px);
+}
+
+#hero .hero-txt{
+    font-family: 'chivo', sans-serif;
+    flex: 1 1 0;
+    box-sizing: border-box;
+    margin: 3rem 8rem;
+    padding: 5rem 0;
+    align-self:flex-start;
+    width: 50%;
+    color: var(--txt-col);
+}
+#hero .hero-txt .soln{
+    font-size: 1.3rem;
+    color: var(--cta-col);
+    margin-bottom: 0;
+}
+#hero .hero-txt h1{
+    font-size: 2.5rem;
+    background: linear-gradient(90deg, var(--shade1), var(--main-clr));
+    background-clip: text;
+    /* -webkit-background-clip: text; */
+    -webkit-text-fill-color: transparent;
+}
+#hero .hero-txt .ai{
+    font-size: 1.6rem;
+    margin-bottom: 5px;
+}
+#hero .hero-txt p{
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+}
+#hero .hero-txt .soln-txt{
+    font-size: 1rem;
+    margin-bottom: 20px;
+}
+
+#hero .hero-txt .cta-btn{
+    text-decoration: none;
+    padding: 5px 8px;
+    border-radius: 3px;
+    font-size: 0.88rem;
+    margin-top: 50px;
+    color: var(--txt-w-col);
+    background-color: var(--cta-col);
+}
+
+#hero .hero-graphic{
+    position: relative;
+    width: 50%;
+    flex: 1 1 0;
+    display: flex;
+    margin-top: 10rem;
+    align-self: flex-start;
+    justify-content: center;
+}
+#hero .hero-graphic .slider{
+    position: absolute;
+    width: 180px;
+    height: 230px;
+    top: 10%;
+    left: 15%;
+    transform-style: preserve-3d;
+    transform: perspective(1300);
+    animation: infiniloop 40s linear infinite;
+}
+#hero .hero-graphic .grc-img{
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    top: 0%;
+    margin: 0 10px;
+    transform: rotateY(calc((var(--position) - 1) * (360 / var(--quantity) * 1deg))) translateZ(250px);
+}
+#hero .hero-graphic .grc-img img{
+    width: 100%;
+    height: auto;
+}
+
 #hero .bcg-shape{
     position: absolute;
     top: 20vh;
-    width: 400px;
-    height: 400px;
-    background-color: var(--shade1);
+    width: 200px;
+    height: 200px;
+    transform: rotateZ(45deg);
+    background-color: var(--shade2);
+    z-index: -1;
 }
 
 
@@ -149,41 +238,7 @@ body{
 /* =========================================================== */
 /* Media Queries */
 /* tablets ---------------- */
-@media screen and (max-width: 770px) {
-    html{
-        font-size: 16px;
-    }
 
-    /* header -------- */
-    #header .navbar{
-        justify-content: space-between;
-    }
-
-    #header .navbar .logo img{
-        width: 45px;
-        margin: 8px 13px;
-    }
-
-    #header .navbar .nav-links{
-        flex-direction: column;
-        position: absolute;
-        top: 110%;
-        right: 1px;
-        width: auto;
-        box-shadow: 0 0 5px var(--shade2);
-        background-color: var(--main-clr);
-        opacity: 80%;
-        font-size: 0.8rem;
-        padding: 20px 20px;
-    }
-    
-    #header .navbar .nav-links a{
-    }
-
-    /* hero ----------- */
-    
-
-}
 
 /* mobile phones ----------- */
 @media screen and (max-width: 550px) {
@@ -221,7 +276,18 @@ body{
         animation: toleft 1s ease forwards;
     }
 
+    #toggler button{
+        display: block;
+    }
+
     /* hero ----------- */
+    #hero{
+        overflow-x: hidden;
+    }
+
+    #hero .glass{
+        flex-direction: column;
+    }
    
 
 }
