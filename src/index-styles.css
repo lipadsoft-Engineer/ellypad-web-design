@@ -132,7 +132,7 @@ body{
 #hero{
     position: relative;
     box-sizing: border-box;
-    overflow-x: hidden;
+    overflow: hidden;
     width: 100vw;
     padding: 0 0px;
 }
@@ -141,7 +141,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    backdrop-filter: blur(50px);
+    backdrop-filter: blur(70px);
 }
 
 #hero .hero-txt{
@@ -223,14 +223,37 @@ body{
 
 #hero .bcg-shape{
     position: absolute;
-    top: 20vh;
-    width: 200px;
-    height: 200px;
-    transform: rotateZ(45deg);
-    background-color: var(--shade2);
     z-index: -1;
 }
-
+#hero .l-green{
+    left: 7rem;
+    top: 30vh;
+    width: 500px;
+    height: 150px;
+    background-color: #c97aa2;
+}
+#hero .l-blue{
+    width: 400px;
+    height: 300px;
+    border-radius: 50%;
+    background-color: rgb(143, 217, 241);
+    top: 20vh;
+    right: 10rem;
+}
+#hero .l-purple{
+    background-color: rgb(151, 67, 177);
+    top: 40vh;
+    left: 50%;
+    width: 300px;
+    height: 200px;
+}
+#hero .l-red{
+    background-color: rgb(231, 68, 68);
+    top: 70%;
+    left: 10%;
+    width: 300px;
+    height: 200px;
+}
 
 
 
